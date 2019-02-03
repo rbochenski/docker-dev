@@ -15,6 +15,6 @@ nameserver $IP
 port 19322
 "
 
-sudo echo "$NS" >> /etc/resolver/internal
+sudo echo "$NS" > /etc/resolver/internal
 
 ./setup_native_nfs_docker_osx.sh
