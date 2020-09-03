@@ -53,9 +53,9 @@ echo "== Setting up nfs..."
 LINE="/Users -alldirs -mapall=$U:$G localhost"
 FILE=/etc/exports
 sudo cp /dev/null $FILE
-grep -qF -- "$LINE" "$FILE" || sudo echo "$LINE" | sudo tee -a $FILE > /dev/null
+sudo grep -qF -- "$LINE" "$FILE" || sudo echo "$LINE" | sudo tee -a $FILE > /dev/null
 
-cp ./nfs/nfs.conf /etc/nfs.conf
+sudo cp ./nfs/nfs.conf /etc/nfs.conf
 
 echo "== Restarting nfsd..."
 sudo nfsd restart
