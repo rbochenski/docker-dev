@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo 'Setting dns resolver will require sudo'
-sudo mkdir -p /etc/respolver
+sudo mkdir -p /etc/resolver
 sudo cp resolver/* /etc/resolver
 
 echo "Entries created in /etc/resolver"
